@@ -1,0 +1,7 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=Image-Selector-debug.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.Shivam-lib -DartifactId=Image-selector -Dversion=1.0.0 -Dpackaging=aar -DgeneratePom=true
